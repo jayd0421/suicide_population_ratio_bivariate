@@ -5,7 +5,7 @@
 
 ## Overview
 
-This project is a web-based geospatial visualisation that explores the relationship between two demographic variables for the year **2021**:
+This project is a visualisation that explores the relationship between two demographic variables for the year **2021**:
 
 1.  **Male-to-Female Suicide Death Ratio** (per 100,000 population)
 2.  **Male-to-Female Population Ratio**
@@ -19,6 +19,11 @@ Using a **bivariate choropleth map**, this visualisation highlights and compares
 * **Bivariate Mapping**: Uses a colour-blending technique to represent two variables simultaneously on a single map.
 * **Interactive Legend**: Includes a bivariate matrix legend (`images/bivariate-legend.png`) to interpret the color scales.
 * **Global Coverage**: Data visualised at the country level.
+
+## Data Sources
+* **UN Countries Simplified**: Geospatial boundaries.
+* **UN Statistics**: Suicide rate data.
+* **UN Population**: Demographic population data.
 
 ## Repository Structure
 
