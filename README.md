@@ -1,0 +1,1 @@
+# suicide_population_ratio_bivariate
