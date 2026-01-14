@@ -7,8 +7,8 @@
 
 This project is a visualisation that explores the relationship between two demographic variables for the year **2021**:
 
-1.  **Male-to-Female Suicide Death Ratio** (per 100,000 population)
-2.  **Male-to-Female Population Ratio**
+1.  **Male-to-Female Suicide Death Ratio**: ratio of male to female suicides per 100,000 population.
+2.  **Male-to-Female Population Ratio**: ratio of males to females in the population.
 
 Using a **bivariate choropleth map**, this visualisation highlights and compares gender disparities in suicide rates and the population gender balance in countries around the globe.
 
