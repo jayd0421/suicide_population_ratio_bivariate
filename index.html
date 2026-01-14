@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+
+    <title>The Gender Gap in Suicides</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/leaflet.css"> -->
+    
+    <script src="data/country-data.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="header">
+        <span>Gender Gap in Suicides </span>
+        <!-- <span style="font-size: 20px; color: lightsalmon;">2021</span> -->
+    </div>
+
+    <div class="description">
+        <span>
+            This map compares the ratio of 
+            <span class = 'hover-paragraph-highlight-text'> <strong>
+                male-to-female of suicide deaths per 100,000
+            </strong></span> 
+            of a population with the 
+            <span class = 'hover-paragraph-highlight-text'> <strong>
+                male-to-female population ratio
+            </strong></span> 
+            per country in 
+            <span class = 'hover-paragraph-highlight-text'> <strong>2021</strong></span>
+        </span>
+
+        <p style="font-size: 11px; margin-top: 6px;">
+            Data: UN Countries Simplified, UN Statistics, UN Population
+        </p>
+    </div>
+    
+    <div id="map" class="map"></div>
+        
+    <div class="hover-info" id="hoverInfo"></div>
+
+    <div>
+        <img class="sdg-image" src="images/SDG3-app.jpg">
+    </div>
+
+    <div class="bivariate-legend-container">
+        <img class="bivariate-legend" src="images/bivariate-legend.png">
+    
+        <div class="legend-square1"></div>
+        
+        <div class="legend-square" id='square11' style="background-color: #d72528; top: 50%; left: 50%;transform: rotate(-45deg) translate(-249%, -56%)"></div>
+        <div class="legend-square" id='square12' style="background-color: #d797a3; top: 50%; left: 50%;transform: rotate(-45deg) translate(-249%, 56%)"></div>
+        <div class="legend-square" id='square13' style="background-color: #d2deee; top: 50%; left: 50%;transform: rotate(-45deg) translate(-249%, 165%)"></div>
+        
+        <div class="legend-square" id='square21' style="background-color: #871c25; top: 50%; left: 50%;transform: rotate(-45deg) translate(-140%, -56%)"></div> 
+        <div class="legend-square" id='square22' style="background-color: #877194; top: 50%; left: 50%;transform: rotate(-45deg) translate(-140%, 56%)"></div>
+        <div class="legend-square" id='square23' style="background-color: #84a6d9; top: 50%; left: 50%;transform: rotate(-45deg) translate(-140%, 165%)"></div> 
+        
+        <div class="legend-square" id='square31' style="background-color: #371321; top: 50%; left: 50%;transform: rotate(-45deg) translate(-30%, -56%)"></div>
+        <div class="legend-square" id='square32' style="background-color: #374b85; top: 50%; left: 50%;transform: rotate(-45deg) translate(-30%, 56%)"></div> 
+        <div class="legend-square" id='square33' style="background-color: #1f78b4; top: 50%; left: 50%;transform: rotate(-45deg) translate(-30%, 165%)"></div>
+
+
+    </div>
+    
+    <div class="author"> 
+        By Jedidiah Chibinga | CDE Program - University of Salzburg
+    </div>
+
+    
+    <script src="js/map.js"></script>
+</body>
+</html>
