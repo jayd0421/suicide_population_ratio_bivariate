@@ -69,7 +69,7 @@ function highlightFeature(e) {
             <strong
                 style="
                         font-size: 13px;
-                        color: red;
+                        color: rgb(27, 207, 27);
                         margin-bottom: 2px;
                         "
                     ;>
@@ -382,4 +382,5 @@ function suicidePopulationRatiosStyle(feature){
 // };
 
 // var layers = L.control.layers(baseLayers, overlays).addTo(map)  
+
 
