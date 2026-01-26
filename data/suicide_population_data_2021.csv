@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GeoAreaCode,GeoAreaName,MaleSuicide,FemaleSuicide,MFSuicideRatio,Country,MalePopulation,FemalePopulation,MFPopulationRatio
 1,World,12.4,5.9,2.10,,,,
 4,Afghanistan,4.8,2.4,2.00,Afghanistan,"20,186,456","19,813,956",1.02
@@ -204,4 +205,212 @@ GeoAreaCode,GeoAreaName,MaleSuicide,FemaleSuicide,MFSuicideRatio,Country,MalePop
 862,Venezuela (Bolivarian Republic of),15.4,2,7.70,Venezuela (Bolivarian Republic of),"13,972,115","14,265,712",0.98
 882,Samoa,17,7,2.43,Samoa,"107,521","106,258",1.01
 887,Yemen,5.6,2.8,2.00,Yemen,"18,809,391","18,330,840",1.03
+=======
+GeoAreaCode,GeoAreaName,MaleSuicide,FemaleSuicide,MFSuicideRatio,Country,MalePopulation,FemalePopulation,MFPopulationRatio
+1,World,12.4,5.9,2.10,,,,
+4,Afghanistan,4.8,2.4,2.00,Afghanistan,"20,186,456","19,813,956",1.02
+8,Albania,3.2,2.3,1.39,Albania,"1,409,655","1,439,981",0.98
+9,Oceania,15.3,5.5,2.78,,,,
+12,Algeria,3,1.3,2.31,Algeria,"22,848,428","21,912,671",1.04
+15,Northern Africa,2.4,1.3,1.85,,,,
+21,Northern America,23.6,6.3,3.75,,,,
+24,Angola,12.5,3.9,3.21,Angola,"17,077,372","17,455,058",0.98
+28,Antigua and Barbuda,1.6,1.3,1.23,Antigua and Barbuda,"43,920","48,430",0.91
+30,Eastern Asia,12.2,8.1,1.51,,,,
+31,Azerbaijan,2.3,0.8,2.88,Azerbaijan,"5,008,445","5,225,926",0.96
+32,Argentina,12.6,3.4,3.71,Argentina,"22,478,115","22,834,167",0.98
+34,Southern Asia,11.9,8.7,1.37,,,,
+35,South-Eastern Asia,7.1,2.2,3.23,,,,
+36,Australia,19.5,6.7,2.91,Australia,"12,879,363","13,077,055",0.98
+40,Austria,23.6,5.7,4.14,Austria,"4,411,996","4,555,061",0.97
+44,Bahamas,5.9,0.8,7.38,Bahamas,"189,919","206,455",0.92
+48,Bahrain,6.6,1.5,4.40,Bahrain,"931,101","570,663",1.63
+50,Bangladesh,3.6,2,1.80,Bangladesh,"82,572,341","85,086,514",0.97
+51,Armenia,4.2,1,4.20,Armenia,"1,327,816","1,542,533",0.86
+52,Barbados,6.2,1,6.20,Barbados,"135,357","146,790",0.92
+53,Australia and New Zealand,19.2,6.6,2.91,,,,
+56,Belgium,26.2,10.7,2.45,Belgium,"5,705,524","5,865,320",0.97
+62,Central and Southern Asia,11.9,8.6,1.38,,,,
+64,Bhutan,6.2,3.4,1.82,Bhutan,"415,688","359,754",1.16
+68,Bolivia (Plurinational State of),6,2.4,2.50,Bolivia (Plurinational State of),"5,989,944","5,947,416",1.01
+70,Bosnia and Herzegovina,13.7,4.7,2.91,Bosnia and Herzegovina,"1,543,349","1,701,559",0.91
+72,Botswana,11.2,5.5,2.04,Botswana,"1,199,124","1,202,317",1.00
+76,Brazil,11.4,3.9,2.92,Brazil,"103,000,000","106,000,000",0.97
+84,Belize,6.8,1.5,4.53,Belize,"198,903","196,444",1.01
+90,Solomon Islands,29.2,9.6,3.04,Solomon Islands,"390,073","372,519",1.05
+96,Brunei Darussalam,5.2,0.6,8.67,Brunei Darussalam,"240,401","211,320",1.14
+100,Bulgaria,15.2,4.2,3.62,Bulgaria,"3,330,246","3,546,980",0.94
+104,Myanmar,4.8,1,4.80,Myanmar,"26,606,253","26,780,850",0.99
+108,Burundi,11.5,3.9,2.95,Burundi,"6,438,865","6,526,617",0.99
+112,Belarus,27.7,5.1,5.43,Belarus,"4,310,859","4,940,507",0.87
+116,Cambodia,6.3,2.7,2.33,Cambodia,"8,306,910","8,667,396",0.96
+120,Cameroon,13.5,3.5,3.86,Cameroon,"13,415,332","13,500,427",0.99
+124,Canada,14.2,4.7,3.02,Canada,"19,105,378","19,348,680",0.99
+132,Cabo Verde,25.3,4.2,6.02,Cabo Verde,"262,888","253,761",1.04
+140,Central African Republic,14.7,4,3.68,Central African Republic,"2,483,247","2,628,854",0.94
+143,Central Asia,13.1,4.8,2.73,,,,
+144,Sri Lanka,24.2,5.9,4.10,Sri Lanka,"10,990,301","11,710,071",0.94
+145,Western Asia,3.5,1.2,2.92,,,,
+148,Chad,7.4,3,2.47,Chad,"8,944,699","8,883,575",1.01
+150,Europe,22.6,6.5,3.48,,,,
+152,Chile,12.3,3.1,3.97,Chile,"9,672,367","9,783,967",0.99
+156,China,10.3,7.5,1.37,China,"728,000,000","698,000,000",1.04
+170,Colombia,7.9,2.1,3.76,Colombia,"25,273,270","25,914,904",0.98
+174,Comoros,7.5,4.5,1.67,Comoros,"411,525","406,650",1.01
+178,Congo,10.1,3.3,3.06,Congo,"2,946,068","2,946,115",1.00
+180,Democratic Republic of the Congo,13.7,3.9,3.51,Dem. Rep. of the Congo,"49,185,125","49,963,807",0.98
+188,Costa Rica,13.5,2.8,4.82,Costa Rica,"2,502,350","2,557,638",0.98
+191,Croatia,25.1,6.9,3.64,Croatia,"1,891,080","2,033,530",0.93
+192,Cuba,23.5,4.3,5.47,Cuba,"5,497,668","5,624,501",0.98
+196,Cyprus,3.8,2.2,1.73,Cyprus,"663,943","653,366",1.02
+199,Least Developed Countries (LDCs),8.5,3.2,2.66,,,,
+202,Sub-Saharan Africa,11.4,3.5,3.26,,,,
+203,Czechia,21.2,5.7,3.72,Czechia,"5,191,175","5,339,508",0.97
+204,Benin,11.1,3.1,3.58,Benin,"6,720,676","6,692,742",1.00
+208,Denmark,14.7,6.3,2.33,Denmark,"2,913,832","2,942,945",0.99
+214,Dominican Republic,6.9,1.5,4.60,Dominican Republic,"5,535,229","5,588,247",0.99
+218,Ecuador,12.5,2.6,4.81,Ecuador,"8,821,569","8,860,886",1.00
+222,El Salvador,12.6,3.2,3.94,El Salvador,"2,972,125","3,283,657",0.91
+226,Equatorial Guinea,10.2,3.5,2.91,Equatorial Guinea,"929,916","828,871",1.12
+231,Ethiopia,9.1,3.1,2.94,Ethiopia,"61,227,789","60,910,800",1.01
+232,Eritrea,19.4,7.2,2.69,Eritrea,"1,651,921","1,698,263",0.97
+233,Estonia,25.1,5.8,4.33,Estonia,"631,558","700,192",0.90
+242,Fiji,11.2,5.3,2.11,Fiji,"455,108","461,604",0.99
+246,Finland,20.5,8.8,2.33,Finland,"2,738,515","2,802,561",0.98
+250,France,24.1,9.5,2.54,France,"32,016,483","34,067,065",0.94
+262,Djibouti,9.6,6.4,1.50,Djibouti,"556,130","565,119",0.98
+266,Gabon,12,2.4,5.00,Gabon,"1,209,288","1,167,434",1.04
+268,Georgia,9.5,1.3,7.31,Georgia,"1,764,339","2,024,113",0.87
+270,Gambia,6.5,3.1,2.10,Gambia,"1,282,181","1,293,829",0.99
+275,State of Palestine,1.1,0.2,5.50,State of Palestine,"2,577,132","2,608,204",0.99
+276,Germany,18.4,7.6,2.42,Germany,"41,319,354","42,377,729",0.98
+288,Ghana,8.3,2.3,3.61,Ghana,"16,247,588","16,271,078",1.00
+296,Kiribati,31,4.8,6.46,Kiribati,"62,041","66,337",0.94
+300,Greece,7.9,1.6,4.94,Greece,"5,125,529","5,454,032",0.94
+308,Grenada,1.9,0.7,2.71,Grenada,"58,680","58,008",1.01
+320,Guatemala,7.1,2.8,2.54,Guatemala,"8,730,025","8,868,626",0.98
+324,Guinea,6.1,3.5,1.74,Guinea,"6,766,588","6,943,925",0.97
+328,Guyana,39.9,10.4,3.84,Guyana,"397,649","417,833",0.95
+332,Haiti,10.6,5.1,2.08,Haiti,"5,637,251","5,737,335",0.98
+340,Honduras,5,0.9,5.56,Honduras,"5,182,859","5,107,018",1.01
+348,Hungary,26.2,7.5,3.49,Hungary,"4,654,276","5,053,574",0.92
+352,Iceland,14.4,9.3,1.55,Iceland,"190,972","181,672",1.05
+356,India,13.8,11.2,1.23,India,"730,000,000","684,000,000",1.07
+360,Indonesia,1.5,0.9,1.67,Indonesia,"139,000,000","138,000,000",1.01
+364,Iran (Islamic Republic of),5.8,2.3,2.52,Iran (Islamic Republic of),"45,006,117","43,449,371",1.04
+368,Iraq,4.4,1.5,2.93,Iraq,"21,586,716","21,484,495",1.00
+372,Ireland,12.6,4.6,2.74,Ireland,"2,489,622","2,538,804",0.98
+376,Israel,6.3,2.4,2.63,Israel,"4,446,561","4,496,364",0.99
+380,Italy,10.5,3.6,2.92,Italy,"29,153,420","30,575,930",0.95
+384,Côte d'Ivoire,12,2.6,4.62,Côte d'Ivoire,"15,121,702","14,518,035",1.04
+388,Jamaica,3,0.4,7.50,Jamaica,"1,404,823","1,432,859",0.98
+392,Japan,23.6,11.5,2.05,Japan,"61,379,113","64,300,226",0.95
+398,Kazakhstan,24.4,5.3,4.60,Kazakhstan,"9,601,078","10,142,525",0.95
+400,Jordan,0.9,0.3,3.00,Jordan,"5,718,054","5,348,302",1.07
+404,Kenya,6.7,2.5,2.68,Kenya,"26,473,100","26,746,066",0.99
+408,Democratic People's Republic of Korea,10.5,8.1,1.30,Dem. People's Rep. of Korea,"12,942,571","13,289,963",0.97
+410,Republic of Korea,38.2,16.9,2.26,Republic of Korea,"25,876,232","25,972,166",1.00
+414,Kuwait,3.6,0.3,12.00,Kuwait,"2,645,301","1,715,441",1.54
+417,Kyrgyzstan,10.5,3.1,3.39,Kyrgyzstan,"3,373,860","3,446,619",0.98
+418,Lao People's Democratic Republic,6.5,2.6,2.50,Lao People's Dem. Republic,"3,746,469","3,706,725",1.01
+419,Latin America and the Caribbean,10.9,3,3.63,,,,
+422,Lebanon,0.9,0.6,1.50,Lebanon,"2,777,715","2,940,407",0.94
+426,Lesotho,41.4,16.6,2.49,Lesotho,"1,100,677","1,160,865",0.95
+428,Latvia,27.5,4.6,5.98,Latvia,"871,887","1,013,700",0.86
+430,Liberia,8,3.9,2.05,Liberia,"2,623,166","2,636,157",1.00
+432,Landlocked developing countries (LLDCs),10.3,3.8,2.71,,,,
+434,Libya,7.2,2.7,2.67,Libya,"3,630,945","3,504,230",1.04
+440,Lithuania,36.7,9.2,3.99,Lithuania,"1,313,587","1,480,901",0.89
+442,Luxembourg,12.1,4.3,2.81,Luxembourg,"322,375","317,899",1.01
+450,Madagascar,8.7,3.5,2.49,Madagascar,"14,893,095","14,797,988",1.01
+454,Malawi,12.5,2.9,4.31,Malawi,"9,774,488","10,272,771",0.95
+458,Malaysia,8.8,2.2,4.00,Malaysia,"18,008,668","16,273,731",1.11
+462,Maldives,2.2,0.3,7.33,Maldives,"320,476","195,678",1.64
+466,Mali,5.5,2.8,1.96,Mali,"11,300,445","11,088,186",1.02
+470,Malta,8.4,4.4,1.91,Malta,"272,254","252,123",1.08
+478,Mauritania,3.7,1.7,2.18,Mauritania,"2,317,615","2,417,260",0.96
+480,Mauritius,18,3,6.00,Mauritius,"641,607","638,017",1.01
+484,Mexico,11.6,2.6,4.46,Mexico,"61,979,793","65,668,355",0.94
+496,Mongolia,32.2,4.8,6.71,Mongolia,"1,668,933","1,670,742",1.00
+498,Republic of Moldova,24.8,5,4.96,Republic of Moldova,"1,393,129","1,630,650",0.85
+499,Montenegro,17.1,6,2.85,Montenegro,"290,573","313,278",0.93
+504,Morocco,3.4,2.4,1.42,Morocco,"18,653,398","18,301,045",1.02
+508,Mozambique,15.6,6,2.60,Mozambique,"15,354,330","16,353,471",0.94
+512,Oman,1.4,0.2,7.00,Oman,"2,750,964","1,749,460",1.57
+513,Europe and Northern America,23,6.4,3.59,,,,
+516,Namibia,13.9,3.6,3.86,Namibia,"1,371,399","1,439,149",0.95
+524,Nepal,13.3,7.2,1.85,Nepal,"14,240,049","15,234,962",0.93
+528,Netherlands (Kingdom of the),15.4,7.6,2.03,Netherlands,"8,800,732","8,929,832",0.99
+543,Oceania (exc. Australia and New Zealand),6,2.6,2.31,,,,
+548,Vanuatu,24.7,6.6,3.74,Vanuatu,"154,583","151,286",1.02
+554,New Zealand,17.9,6.1,2.93,New Zealand,"2,535,676","2,572,021",0.99
+558,Nicaragua,6.9,1.7,4.06,Nicaragua,"3,266,527","3,378,214",0.97
+562,Niger,5.9,3,1.97,Niger,"12,439,986","12,062,154",1.03
+566,Nigeria,8.4,1.5,5.60,Nigeria,"110,000,000","108,000,000",1.02
+578,Norway,18.9,7.4,2.55,Norway,"2,728,195","2,679,896",1.02
+583,Micronesia (Federated States of),31.1,8.6,3.62,Micronesia (Fed. States of),"55,517","56,108",0.99
+586,Pakistan,8,3.2,2.50,Pakistan,"122,000,000","117,000,000",1.04
+591,Panama,5.6,1,5.60,Panama,"2,174,004","2,171,401",1.00
+598,Papua New Guinea,2.2,1.4,1.57,Papua New Guinea,"5,164,383","4,848,513",1.07
+600,Paraguay,8,4.7,1.70,Paraguay,"3,355,140","3,329,042",1.01
+604,Peru,2.3,0.8,2.88,Peru,0,"16,657,801",0.00
+608,Philippines,5.2,1.8,2.89,Philippines,"56,419,691","56,681,259",1.00
+616,Poland,24.1,3.8,6.34,Poland,"18,443,925","19,596,377",0.94
+620,Portugal,17.7,5.9,3.00,Portugal,"4,944,983","5,445,973",0.91
+624,Guinea-Bissau,11.6,3.9,2.97,Guinea-Bissau,"1,016,117",0,
+626,Timor-Leste,4.8,2.3,2.09,Timor-Leste,"680,874","669,265",1.02
+630,Puerto Rico,9.4,1.9,4.95,Puerto Rico,"1,535,552","1,717,658",0.89
+634,Qatar,6.2,0.8,7.75,Qatar,"2,021,786","793,197",2.55
+642,Romania,16.4,3.3,4.97,Romania,"9,324,761","9,923,400",0.94
+643,Russian Federation,36.7,8.1,4.53,Russian Federation,"67,747,122","78,089,054",0.87
+646,Rwanda,12.8,4.8,2.67,Rwanda,"6,500,904","6,854,357",0.95
+662,Saint Lucia,9.3,1.3,7.15,Saint Lucia,"88,409","90,113",0.98
+670,Saint Vincent and the Grenadines,0.8,0,#DIV/0!,Saint Vincent and the Grenadines,"52,584","50,257",1.05
+678,Sao Tome and Principe,1.3,0.4,3.25,Sao Tome and Principe,"110,497","111,464",0.99
+682,Saudi Arabia,1.1,0.7,1.57,Saudi Arabia,"19,026,952","12,301,423",1.55
+686,Senegal,10.4,3,3.47,Senegal,"8,738,686","8,482,181",1.03
+688,Serbia,23,8,2.88,Serbia,"3,256,229","3,579,201",0.91
+690,Seychelles,6.3,1.7,3.71,Seychelles,"67,573","55,415",1.22
+694,Sierra Leone,7.8,4.5,1.73,Sierra Leone,"4,035,670","4,058,933",0.99
+702,Singapore,11.1,4.9,2.27,Singapore,"2,866,604","2,679,686",1.07
+703,Slovakia,17.1,3,5.70,Slovakia,"2,658,236","2,784,523",0.95
+704,Viet Nam,10.4,4.3,2.42,Viet Nam,"48,448,496","50,486,603",0.96
+705,Slovenia,29.9,7.7,3.88,Slovenia,"1,060,637","1,052,858",1.01
+706,Somalia,9.8,6.1,1.61,Somalia,"8,653,664","8,617,768",1.00
+710,South Africa,35.4,9.9,3.58,South Africa,"29,853,373","31,649,230",0.94
+716,Zimbabwe,23.6,11.7,2.02,Zimbabwe,"7,505,482",0,
+722,Small island developing States (SIDS),11.5,3.4,3.38,,,,
+724,Spain,13.1,4.5,2.91,Spain,"23,442,946","24,292,718",0.97
+728,South Sudan,12.1,3.9,3.10,South Sudan,"5,345,854","5,519,926",0.97
+729,Sudan,3.9,2.4,1.63,Sudan,"23,852,137","24,214,788",0.99
+740,Suriname,30.5,14,2.18,Suriname,"309,422","308,475",1.00
+747,Northern Africa and Western Asia,3,1.3,2.31,,,,
+748,Eswatini,45,10.1,4.46,Eswatini,"592,170","614,424",0.96
+752,Sweden,18.9,8.7,2.17,Sweden,"5,242,008","5,174,124",1.01
+753,Eastern and South-Eastern Asia,10.7,6.4,1.67,,,,
+756,Switzerland,18.9,9.2,2.05,Switzerland,"4,321,809","4,385,215",0.99
+760,Syrian Arab Republic,0.9,0.3,3.00,Syrian Arab Republic,"10,810,785","10,818,055",1.00
+762,Tajikistan,3.6,1.3,2.77,Tajikistan,"4,885,968","5,080,941",0.96
+764,Thailand,28.2,5.5,5.13,Thailand,"35,041,134","36,686,199",0.96
+768,Togo,14.6,4,3.65,Togo,"4,464,569","4,413,810",1.01
+776,Tonga,6,3.5,1.71,Tonga,"50,721","54,769",0.93
+780,Trinidad and Tobago,22.2,4.6,4.83,Trinidad and Tobago,"735,406","752,312",0.98
+784,United Arab Emirates,2.5,0.4,6.25,United Arab Emirates,"6,286,751","3,502,297",1.80
+788,Tunisia,2.5,1.2,2.08,Tunisia,"5,966,588","6,082,035",0.98
+792,Türkiye,4.3,1.1,3.91,Türkiye,"43,334,332","43,351,921",1.00
+795,Turkmenistan,10.3,3.5,2.94,Turkmenistan,"3,472,736","3,619,308",0.96
+800,Uganda,8.8,2.3,3.83,Uganda,"22,747,489","23,163,441",0.98
+804,Ukraine,37.7,6.9,5.46,Ukraine,"20,644,066","23,654,575",0.87
+807,North Macedonia,7.9,3.8,2.08,North Macedonia,"900,519","950,589",0.95
+818,Egypt,0.9,0.3,3.00,Egypt,"56,026,138","54,930,871",1.02
+826,United Kingdom of Great Britain and Northern Ireland,14.7,4.6,3.20,United Kingdom,"33,298,161","34,370,631",0.97
+834,United Republic of Tanzania,7.5,2.7,2.78,United Republic of Tanzania,"31,128,864","31,701,548",0.98
+840,United States of America,24.7,6.5,3.80,United States of America,"171,000,000","169,000,000",1.01
+854,Burkina Faso,13,4,3.25,Burkina Faso,"10,953,636","11,041,608",0.99
+858,Uruguay,39.9,10.5,3.80,Uruguay,"1,647,432","1,749,263",0.94
+860,Uzbekistan,10.6,6.1,1.74,Uzbekistan,"17,264,132","16,979,564",1.02
+862,Venezuela (Bolivarian Republic of),15.4,2,7.70,Venezuela (Bolivarian Republic of),"13,972,115","14,265,712",0.98
+882,Samoa,17,7,2.43,Samoa,"107,521","106,258",1.01
+887,Yemen,5.6,2.8,2.00,Yemen,"18,809,391","18,330,840",1.03
+>>>>>>> 2151a4474da794a367586734ac8cbdce6f98b2f9
 894,Zambia,11.2,3.1,3.61,Zambia,"9,702,842","9,900,766",0.98
