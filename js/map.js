@@ -63,7 +63,7 @@ function highlightFeature(e) {
 
     countryData = e.target.feature.properties;
 
-    if (countryData.GeoAreaName === null || countryData.MFSuicideRatio === null || countryData.MFPopulationRatio === null){
+    if (countryData.GeoAreaName === null || countryData.MFSuicideRatio === null || countryData.MFPopulationRatio === null || countryData.MFSuicideRatio === 0 || countryData.MFPopulationRatio === 0 ){
         if (countryData.GeoAreaName === null){
            hoverInfoText = `
             <strong
@@ -315,8 +315,8 @@ function getFillColor(sRatio, pRatio) {
 // }
 
 function getFillOpacity(country, sRatio, pRatio) {
-    if (country === null || sRatio === null || pRatio === null){
-        return "0"
+    if (country === null || sRatio === null || pRatio === null|| sRatio === 0 || pRatio === 0){
+        return "0.1"
     } else {
         return "1"
     }
