@@ -19,15 +19,15 @@ var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y
 var scale = L.control.scale().addTo(map);
 
 function getSRatioBin(sRatio) {
-    if (sRatio >= 8) return 2;
-    if (sRatio >= 4) return 1;
+    if (sRatio >= 6) return 2;
+    if (sRatio >= 3) return 1;
     if (sRatio >= 1.2) return 0;
     return -1;
 }
 
 function getPRatioBin(pRatio) {
-    if (pRatio >= 2) return 2;
-    if (pRatio >= 1) return 1;
+    if (pRatio >= 1) return 2;
+    if (pRatio >= 0.97) return 1;
     if (pRatio >= 0.85) return 0;
     return -1;
 }
@@ -54,7 +54,7 @@ function highlightFeature(e) {
     const layer = e.target;
     layer.setStyle({
         weight: 2,
-        color: '#e5ea54',
+        color: '#0fa802',
         fillOpacity: 0.9
     });
     layer.bringToFront();

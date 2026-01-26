@@ -131,17 +131,17 @@ body{
 .sdg-image{
     position: absolute;
     bottom: 5%;
-    left: 1%;
+    right: 1%;
     border-radius: 10px;
-    width: 80px;
+    width: 90px;
     z-index: 100;
 }
 
 .bivariate-legend-container {
     position: absolute;
-    width: 130px;
-    bottom: 19%;
-    left: 50%;
+    width: 140px;
+    bottom: 22%;
+    left: 0.5%;
     display: inline-block;
 }
 
@@ -149,11 +149,11 @@ body{
     position: absolute;
     width: 100%;
     border-radius: 10px;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
     z-index: 100;
 }
 
-.legend-square1 {
+/* .legend-square1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -164,7 +164,7 @@ body{
     border-radius: 2px;
     transform-origin: center center;
     z-index: 200;
-}
+} */
 
 .author {
     position: absolute;
@@ -180,8 +180,8 @@ body{
 
 .legend-square {
     position: absolute;
-    width: 21px;
-    height: 21px;
+    width: 23px;
+    height: 23px;
     background-color: red;
     border-radius: 3px;
     border: 2px solid transparent;
@@ -191,13 +191,13 @@ body{
 }
 
 .legend-square:hover {
-    border-color: yellow;
+    border-color: rgb(38, 129, 38);
     border-width: 2px;
     transform: scale(1.2);
 }
 
 .legend-square-active {
-    border-color: yellow;
+    border-color: rgb(1, 235, 1);
     border-width: 3px;
     border-radius: 3px;
     box-shadow: 1px;
