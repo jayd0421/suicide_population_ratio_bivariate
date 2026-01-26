@@ -26,23 +26,27 @@ body{
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 35px;
-    box-shadow: 1px 1px 20px -2px #888888;
+    box-shadow: 0 4px 15px rgba(125, 125, 125, 0.5);
 }
 
 .description {
     position: absolute;
     top: 70px;
     left: 10px;
-    width: 400px;
+    width: 350px;
     background: rgba(26, 26, 46, 0.8);
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(125, 125, 125, 0.5);
     z-index: 100;
-    box-shadow: 1px 1px 20px -2px #888888;
 }
 
+.description-highlight-text {
+    font-size: 15px;
+    color: rgb(27, 207, 27);
+}
 
 .hover-info {
     position: absolute;
@@ -57,7 +61,7 @@ body{
     border-radius: 8px;
     text-align: center;
     display: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(125, 125, 125, 0.5);
     z-index: 100;
 }
 
