@@ -158,31 +158,31 @@ function highlightFeature(e) {
         }
     document.getElementById('hoverInfo').innerHTML = hoverInfoText;
 
-    if (countryData.MFSuicideRatio >= 8 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 1) {
+    if (countryData.MFSuicideRatio >= 6 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 0.97) {
         squareHighlight11.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio < 8 && countryData.MFSuicideRatio >= 4 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 1) {
+    } else if (countryData.MFSuicideRatio < 6 && countryData.MFSuicideRatio >= 3 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 0.97) {
         squareHighlight12.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio < 4 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 1) {
+    } else if (countryData.MFSuicideRatio < 3 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 0.97) {
         squareHighlight13.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio >= 8 && countryData.MFPopulationRatio >= 1 && countryData.MFPopulationRatio < 2) {
+    } else if (countryData.MFSuicideRatio >= 6 && countryData.MFPopulationRatio >= 0.97 && countryData.MFPopulationRatio < 1) {
         squareHighlight21.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio < 8 && countryData.MFSuicideRatio >= 4 && countryData.MFPopulationRatio >= 1 && countryData.MFPopulationRatio < 2) {
+    } else if (countryData.MFSuicideRatio < 6 && countryData.MFSuicideRatio >= 3 && countryData.MFPopulationRatio >= 0.97 && countryData.MFPopulationRatio < 1) {
         squareHighlight22.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio < 4 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 1 && countryData.MFPopulationRatio < 2) {
+    } else if (countryData.MFSuicideRatio < 3 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 0.97 && countryData.MFPopulationRatio < 1) {
         squareHighlight23.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio > 8 && countryData.MFPopulationRatio >= 2) {
+    } else if (countryData.MFSuicideRatio > 6 && countryData.MFPopulationRatio >= 1) {
         squareHighlight31.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio < 8 && countryData.MFSuicideRatio >= 4 && countryData.MFPopulationRatio >= 2) {
+    } else if (countryData.MFSuicideRatio < 6 && countryData.MFSuicideRatio >= 3 && countryData.MFPopulationRatio >= 1) {
         squareHighlight32.classList.add('legend-square-active');
 
-    } else if (countryData.MFSuicideRatio < 4 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 2) {
+    } else if (countryData.MFSuicideRatio < 3 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 1) {
         squareHighlight33.classList.add('legend-square-active');
 
     }
@@ -242,22 +242,23 @@ function getFillColor(sRatio, pRatio) {
     const pBin = getPRatioBin(pRatio);
 
     switch (`${sBin}-${pBin}`) {
-        case "2-0": return "#d72528";
-        case "1-0": return "#d797a3";
-        case "0-0": return "#d2deee";
+        case "2-0": return "#9e3547";
+        case "1-0": return "#ba8890";
+        case "0-0": return "#d3d3d3";
 
-        case "2-1": return "#871c25";
-        case "1-1": return "#877194";
-        case "0-1": return "#84a6d9";
+        case "2-1": return "#682a41";
+        case "1-1": return "#7a6b84";
+        case "0-1": return "#8aa6c2";
 
-        case "2-2": return "#371321";
-        case "1-2": return "#374b85";
-        case "0-2": return "#1f78b4";
+        case "2-2": return "#311e3b";
+        case "1-2": return "#3a4e78";
+        case "0-2": return "#4279b0";
 
         default:
             return "white";
     }
 }
+
 
 // function getFillColor(sRatio, pRatio) {
 //     if (sRatio >= 8 && pRatio >= 0.85 && pRatio < 1) {
@@ -324,7 +325,7 @@ function getFillOpacity(country, sRatio, pRatio) {
 
 function suicidePopulationRatiosStyle(feature){
     return {
-        color: "gray",
+        color: 'white',
         weight: 1,
         fillColor: getFillColor(
             feature.properties.MFSuicideRatio,

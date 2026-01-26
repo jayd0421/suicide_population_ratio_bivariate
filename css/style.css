@@ -191,8 +191,8 @@ body{
 }
 
 .legend-square:hover {
-    border-color: rgb(38, 129, 38);
-    border-width: 2px;
+    border-color: rgb(1, 235, 1);
+    border-width: 3px;
     transform: scale(1.2);
 }
 
