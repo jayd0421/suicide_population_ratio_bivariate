@@ -26,6 +26,7 @@ body{
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 35px;
+    box-shadow: 1px 1px 20px -2px #888888;
 }
 
 .description {
@@ -39,10 +40,10 @@ body{
     border-radius: 4px;
     font-size: 13px;
     z-index: 100;
+    box-shadow: 1px 1px 20px -2px #888888;
 }
 
 
-/* HOVER INFO */
 .hover-info {
     position: absolute;
     font-size: 0.9em;
