@@ -18,14 +18,14 @@ var basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y
 
 var scale = L.control.scale().addTo(map);
 
-function getSRatioBin(sRatio) {
+function getSuicideRatioBin(sRatio) {
     if (sRatio >= 6) return 2;
     if (sRatio >= 3) return 1;
     if (sRatio >= 1.2) return 0;
     return -1;
 }
 
-function getPRatioBin(pRatio) {
+function getPopulationRatioBin(pRatio) {
     if (pRatio >= 1) return 2;
     if (pRatio >= 0.97) return 1;
     if (pRatio >= 0.85) return 0;
@@ -35,8 +35,7 @@ function getPRatioBin(pRatio) {
 
 // CONTROL HOVER INFORMATION
 const hoverInfo = document.getElementById('hoverInfo');
-
-// var squareHighlight = document.getElementById('square13')
+const legendHoverInfo = document.getElementById('hoverInfo');
 
 const squareHighlight11 = document.getElementById('square11');
 const squareHighlight12 = document.getElementById('square12');
@@ -50,11 +49,12 @@ const squareHighlight31 = document.getElementById('square31');
 const squareHighlight32 = document.getElementById('square32');
 const squareHighlight33 = document.getElementById('square33');
 
+
 function highlightFeature(e) {
     const layer = e.target;
     layer.setStyle({
         weight: 2,
-        color: '#0fa802',
+        color: '#ff0000',
         fillOpacity: 0.9
     });
     layer.bringToFront();
@@ -63,8 +63,17 @@ function highlightFeature(e) {
 
     countryData = e.target.feature.properties;
 
-    if (countryData.GeoAreaName === null || countryData.MFSuicideRatio === null || countryData.MFPopulationRatio === null || countryData.MFSuicideRatio === 0 || countryData.MFPopulationRatio === 0 ){
-        if (countryData.GeoAreaName === null){
+    countryName = countryData.GeoAreaName
+    sRatio = countryData.MFSuicideRatio
+    pRatio = countryData.MFPopulationRatio
+    mSuicide = countryData.MaleSuicide
+    fSuicide = countryData.FemaleSuicide
+    mPopulation = (Number(countryData.MalePopulation.replaceAll(",", ""))/1000000).toFixed(1)
+    fPopulation = (Number(countryData.FemalePopulation.replaceAll(",", ""))/1000000).toFixed(1)
+
+
+    if (countryName === null || sRatio === null || pRatio === null || sRatio === 0 || pRatio === 0 ){
+        if (countryName === null){
            hoverInfoText = `
             <strong
                 style="
@@ -85,7 +94,7 @@ function highlightFeature(e) {
                     margin-bottom: 2px;
                     "
                 ;>
-                ${countryData.GeoAreaName}
+                ${countryName}
             </strong>
             <p>
                 Sorry, this country has missing data.
@@ -93,39 +102,45 @@ function highlightFeature(e) {
                 `;
         }
         } else{
+            if (fPopulation > mPopulation) {
+                popText = 'higher female population'
+            } else{
+                popText = 'higher male population'
+            }
+
             hoverInfoText = `
             <strong 
                 class="hover-header">
-                ${countryData.GeoAreaName}
+                ${countryName}
             </strong>
 
             <p class="hover-paragraph-text">
                 has 
 
                 <strong class="hover-paragraph-highlight-text">
-                    ${countryData.MFSuicideRatio} 
+                    ${sRatio} 
                     times
                 </strong> 
 
                 higher suicide rate in males with a 
                 
                 <strong class="hover-paragraph-highlight-text">
-                    higher female population
+                    ${popText}
                 </strong>
 
-                (${countryData.MFPopulationRatio} males for every female).
+                (${pRatio} males for every female).
             </p>
 
             <div class="popup-section">
                 <span class="popup-section-header"> Male-Female Ratios</span>
                 <div class="popup-section-row">
                     <span class="hover-field-name"> Suicide Ratio:</span>
-                    <span class="hover-field-value">${countryData.MFSuicideRatio}</span>
+                    <span class="hover-field-value">${sRatio}</span>
                 </div>
 
                 <div class="popup-section-row">
                     <span class="hover-field-name"> Population Ratio:</span>
-                    <span class="hover-field-value">${countryData.MFPopulationRatio}</span>
+                    <span class="hover-field-value">${pRatio}</span>
                 </div>
             </div>
 
@@ -133,12 +148,12 @@ function highlightFeature(e) {
                 <span class="popup-section-header"> Suicides per 100,000 of population<span>
                 <div class="popup-section-row">
                     <span class="hover-field-name">Males:</span>
-                    <span class="hover-field-value">${countryData.MaleSuicide}</span>
+                    <span class="hover-field-value">${mSuicide}</span>
                 </div>
 
                 <div class="popup-section-row">
                     <span class="hover-field-name">Females:</span>
-                    <span class="hover-field-value">${countryData.FemaleSuicide}</span>
+                    <span class="hover-field-value">${fSuicide}</span>
                 </div>
             </div>
 
@@ -146,45 +161,33 @@ function highlightFeature(e) {
                 <span class="popup-section-header"> Total Population<span>
                 <div class="popup-section-row">
                     <span class="hover-field-name">Males:</span>
-                    <span class="hover-field-value">${countryData.MalePopulation}</span>
+                    <span class="hover-field-value">${mPopulation}M</span>
                 </div>
 
                 <div class="popup-section-row">
                     <span class="hover-field-name">Females:</span>
-                    <span class="hover-field-value">${countryData.FemalePopulation}</span>
+                    <span class="hover-field-value">${fPopulation}M</span>
                 </div>
             </div>
             `;
         }
     document.getElementById('hoverInfo').innerHTML = hoverInfoText;
 
-    if (countryData.MFSuicideRatio >= 6 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 0.97) {
-        squareHighlight11.classList.add('legend-square-active');
+    const sBin = getSuicideRatioBin(sRatio);
+    const pBin = getPopulationRatioBin(pRatio);
 
-    } else if (countryData.MFSuicideRatio < 6 && countryData.MFSuicideRatio >= 3 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 0.97) {
-        squareHighlight12.classList.add('legend-square-active');
+    switch (`${sBin}-${pBin}`) {
+        case "2-0": squareHighlight11.classList.add('legend-square-active'); break;
+        case "1-0": squareHighlight12.classList.add('legend-square-active'); break;
+        case "0-0": squareHighlight13.classList.add('legend-square-active'); break;
 
-    } else if (countryData.MFSuicideRatio < 3 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 0.85 && countryData.MFPopulationRatio < 0.97) {
-        squareHighlight13.classList.add('legend-square-active');
+        case "2-1": squareHighlight21.classList.add('legend-square-active'); break;
+        case "1-1": squareHighlight22.classList.add('legend-square-active'); break;
+        case "0-1": squareHighlight23.classList.add('legend-square-active'); break;
 
-    } else if (countryData.MFSuicideRatio >= 6 && countryData.MFPopulationRatio >= 0.97 && countryData.MFPopulationRatio < 1) {
-        squareHighlight21.classList.add('legend-square-active');
-
-    } else if (countryData.MFSuicideRatio < 6 && countryData.MFSuicideRatio >= 3 && countryData.MFPopulationRatio >= 0.97 && countryData.MFPopulationRatio < 1) {
-        squareHighlight22.classList.add('legend-square-active');
-
-    } else if (countryData.MFSuicideRatio < 3 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 0.97 && countryData.MFPopulationRatio < 1) {
-        squareHighlight23.classList.add('legend-square-active');
-
-    } else if (countryData.MFSuicideRatio > 6 && countryData.MFPopulationRatio >= 1) {
-        squareHighlight31.classList.add('legend-square-active');
-
-    } else if (countryData.MFSuicideRatio < 6 && countryData.MFSuicideRatio >= 3 && countryData.MFPopulationRatio >= 1) {
-        squareHighlight32.classList.add('legend-square-active');
-
-    } else if (countryData.MFSuicideRatio < 3 && countryData.MFSuicideRatio >= 1.2 && countryData.MFPopulationRatio >= 1) {
-        squareHighlight33.classList.add('legend-square-active');
-
+        case "2-2": squareHighlight31.classList.add('legend-square-active'); break;
+        case "1-2": squareHighlight32.classList.add('legend-square-active'); break;
+        case "0-2": squareHighlight33.classList.add('legend-square-active'); break;
     }
 
     hoverInfo.classList.add('show');
@@ -192,7 +195,10 @@ function highlightFeature(e) {
 
 function resetHighlight(e) {
     suicidePopulationRatios.resetStyle(e.target);
+
     hoverInfo.classList.remove('show');
+
+
     squareHighlight11.classList.remove('legend-square-active');
     squareHighlight12.classList.remove('legend-square-active');
     squareHighlight13.classList.remove('legend-square-active');
@@ -204,7 +210,6 @@ function resetHighlight(e) {
     squareHighlight31.classList.remove('legend-square-active');
     squareHighlight32.classList.remove('legend-square-active');
     squareHighlight33.classList.remove('legend-square-active');
-    
 }
 
 function zoomToFeature(e) {
@@ -226,20 +231,11 @@ suicidePopulationRatios = L.geoJson(countries, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
-// suicideRatios = L.geoJson(countries, {
-//     style: suicideRatiosStyle,
-//     onEachFeature: onEachFeature
-// })
-
-// populationRatios = L.geoJson(countries, {
-//     style: populationRatiosStyle,
-//     onEachFeature: onEachFeature
-// })
 
 // CONTROL LAYER STYLING
 function getFillColor(sRatio, pRatio) {
-    const sBin = getSRatioBin(sRatio);
-    const pBin = getPRatioBin(pRatio);
+    const sBin = getSuicideRatioBin(sRatio);
+    const pBin = getPopulationRatioBin(pRatio);
 
     switch (`${sBin}-${pBin}`) {
         case "2-0": return "#9e3547";
@@ -259,60 +255,6 @@ function getFillColor(sRatio, pRatio) {
     }
 }
 
-
-// function getFillColor(sRatio, pRatio) {
-//     if (sRatio >= 8 && pRatio >= 0.85 && pRatio < 1) {
-//         return "#d72528";
-//     } else if (sRatio < 8 && sRatio >= 4 && pRatio >= 0.85 && pRatio < 1) {
-//         return "#d797a3";
-//     } else if (sRatio < 4 && sRatio >= 1.2 && pRatio >= 0.85 && pRatio < 1) {
-//         return "#d2deee";
-//     } else if (sRatio >= 8 && pRatio >= 1 && pRatio < 2) {
-//         return "#871c25";
-//     } else if (sRatio < 8 && sRatio >= 4 && pRatio >= 1 && pRatio < 2) {
-//         return "#877194";
-//     } else if (sRatio < 4 && sRatio >= 1.2 && pRatio >= 1 && pRatio < 2) {
-//         return "#84a6d9";
-//     } else if (sRatio > 8 && pRatio >= 2) {
-//         return "#371321";
-//     } else if (sRatio < 8 && sRatio >= 4 && pRatio >= 2) {
-//         return "#374b85";
-//     } else if (sRatio < 4 && sRatio >= 1.2 && pRatio >= 2) {
-//         return "#1f78b4";
-//     } else {
-//         return "white";
-//     }
-// }
-
-// function getSuicideFillColor(sRatio) {
-//     if (sRatio >= 8) {
-//         return "#371321";
-//     } else if (sRatio < 8 && sRatio >= 6) {
-//         return "#871c25";
-//     } else if (sRatio < 6 && sRatio >= 4) {
-//         return "#d72528";
-//     } else if (sRatio < 4 && sRatio >= 2) {
-//         return "#d797a3";
-//     } else if (sRatio < 2 && sRatio >= 1.2) {
-//         return "#d2deee";
-//     } else {
-//         return "white";
-//     }
-// }
-
-// function getPopulationFillColor(pRatio) {
-//     if (pRatio >= 2) {
-//         return "#374b85";
-//     } else if (pRatio >= 1.5 && pRatio < 2) {
-//         return "#1f78b4";
-//     } else if (pRatio >= 1 && pRatio < 1.5) {
-//         return "#84a6d9";
-//     } else if (pRatio >= 0.85 && pRatio < 1) {
-//         return "#d2deee";
-//     } else {
-//         return "white";
-//     }
-// }
 
 function getFillOpacity(country, sRatio, pRatio) {
     if (country === null || sRatio === null || pRatio === null|| sRatio === 0 || pRatio === 0){
@@ -336,50 +278,83 @@ function suicidePopulationRatiosStyle(feature){
             feature.properties.MFSuicideRatio,
             feature.properties.MFPopulationRatio
             ),
-        
     }
 }
 
-// function suicideRatiosStyle(feature){
-//     return {
-//         color: "black",
-//         weight: 1,
-//         fillColor: getSuicideFillColor(
-//             feature.properties.MFSuicideRatio
-//             ),
-//         fillOpacity: getFillOpacity(
-//             feature.properties.GeoAreaName,
-//             feature.properties.MFSuicideRatio,
-//             feature.properties.MFPopulationRatio
-//             )
-//     }
-// }
 
-// function populationRatiosStyle(feature){
-// 		return {
-//             color: "black",
-//             weight: 1,
-//             fillColor: getPopulationFillColor(
-//                 feature.properties.MFPopulationRatio
-//                 ),
-//             fillOpacity: getFillOpacity(
-//                 feature.properties.GeoAreaName,
-//                 feature.properties.MFSuicideRatio,
-//                 feature.properties.MFPopulationRatio
-//                 )
-//         }
-//     }
+function getHighlightStyle(squareId, sRatio, pRatio) {
+    const sBin = getSuicideRatioBin(sRatio);
+    const pBin = getPopulationRatioBin(pRatio);
+    const spBin = ''
 
+    switch (`${squareId}`) {
+        case "square11": spBin = "2-0"; break;
+        case "square12": spBin = "1-0"; break;
+        case "square13": spBin = "0-0"; break;
 
-// CONTROL MAP OVERLAY LAYERS
-// var baseLayers = {
-//     "OpenStreetMap": basemap
-// };
+        case "square21": spBin = "2-1"; break;
+        case "square22": spBin = "1-1"; break;
+        case "square23": spBin = "0-1"; break;
 
-// var overlays = {
-//     "Suicide & Population Ratios": suicidePopulationRatios,
-//     "Suicide Ratios": suicideRatios,
-//     "Population Ratios": populationRatios
-// };
+        case "square31": spBin = "2-2"; break;
+        case "square32": spBin = "1-2"; break;
+        case "square33": spBin = "0-2"; break;
+    }
 
-// var layers = L.control.layers(baseLayers, overlays).addTo(map)  
+    if (spBin == (`${sBin}-${pBin}`)) {
+        return 1
+    } else{
+        return 0
+    }
+}
+
+function highlightCountryStyle(feature, squareId){
+    const statuss = getHighlightStyle(
+        squareId,
+        feature.properties.MFSuicideRatio,
+        feature.properties.MFPopulationRatio
+        )
+    if (statuss == 1){
+        return {
+            weight: 2,
+            color: '#a80202',
+            fillOpacity: 0.9
+        }
+    }
+}
+
+function squareHoverOn(element){
+    suicidePopulationRatios.setStyle(function (feature) {
+        return highlightCountryStyle(feature, element.id);
+        }
+    )
+
+    legendHoverInfoText = `
+            <p class="hover-paragraph-text"> The highlighted countries have</p>
+
+            <p class="hover-paragraph-text">
+                has 
+
+                <strong class="hover-paragraph-highlight-text">
+                    X
+                    times
+                </strong> 
+
+                higher suicide rate in males with a 
+                
+                <strong class="hover-paragraph-highlight-text">
+                    higher female population
+                </strong>
+
+                X males for every female.
+            </p>
+            `;
+    document.getElementById('legendHoverInfo').innerHTML = legendHoverInfoText;
+    
+    // legendHoverInfo.classList.add('show')
+}
+
+function squareHoverOff() {
+    suicidePopulationRatios.resetStyle()
+    // legendHoverInfo.classList.remove('show');
+}
