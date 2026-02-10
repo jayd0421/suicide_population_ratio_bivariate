@@ -285,7 +285,7 @@ function suicidePopulationRatiosStyle(feature){
 function getHighlightStyle(squareId, sRatio, pRatio) {
     const sBin = getSuicideRatioBin(sRatio);
     const pBin = getPopulationRatioBin(pRatio);
-    const spBin = ''
+    // const spBin = ''
 
     switch (`${squareId}`) {
         case "square11": spBin = "2-0"; break;
